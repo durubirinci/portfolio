@@ -30,12 +30,6 @@ Open [http://localhost:3000](http://localhost:3000) to see it.
 
 You'll get a URL like `duru-portfolio.vercel.app` in ~30 seconds.
 
-## 📝 Adding your resume
-
-Drop your PDF into `public/resume.pdf`. It will be accessible at:
-- `yoursite.com/resume.pdf`
-- `yoursite.com/resume` (auto-redirects)
-
 ## 🎨 Customizing
 
 - **Colors**: Edit CSS variables in `app/globals.css`
@@ -54,8 +48,6 @@ Drop your PDF into `public/resume.pdf`. It will be accessible at:
 │   └── projects/
 │       ├── nuclear-renewable/page.tsx
 │       └── credit-card-fraud/page.tsx
-├── public/
-│   └── resume.pdf          # Add your resume here
 ├── next.config.js
 └── package.json
 ```

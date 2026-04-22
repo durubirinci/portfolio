@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Nuclear vs Renewable Energy Dashboard — Duru Birinci',
+  title: 'Nuclear vs Renewable Energy Dashboard - Duru Birinci',
   description: 'Interactive data visualization analyzing global energy trends across 314 countries from 1990–2025.',
 }
 
@@ -29,7 +29,7 @@ export default function NuclearRenewable() {
           fontSize: '20px',
           letterSpacing: '-0.02em',
         }}>
-          duru<span style={{ color: 'var(--rose)' }}>.</span>
+          duru birinci<span style={{ color: 'var(--rose)' }}>.</span>
         </Link>
         <Link href="/" style={{
           fontFamily: "'JetBrains Mono', monospace",
@@ -183,7 +183,7 @@ export default function NuclearRenewable() {
           After spending a summer inside a nuclear power plant at PSEG, I came back to campus with a lot of half-formed questions. How does nuclear actually stack up against solar and wind over time? What does "clean energy transition" look like when you pull the numbers country by country?
         </p>
         <p style={{ marginBottom: '40px' }}>
-          The answers existed — scattered across CSVs from Our World in Data — but nowhere was there a single place to explore them interactively. So I built one.
+          The answers existed, scattered across CSVs from Our World in Data, but nowhere was there a single place to explore them interactively. So I built one.
         </p>
 
         <h2 style={{
@@ -214,7 +214,7 @@ export default function NuclearRenewable() {
           What I <span className="italic" style={{ color: 'var(--rose)' }}>learned</span>
         </h2>
         <p style={{ marginBottom: '20px' }}>
-          The interesting technical challenge wasn't the plotting — it was data cleaning. Energy data is messy: countries change names, units shift mid-decade, some regions report annually while others report monthly. Building a reliable comparison meant writing a lot of careful Pandas transformations and explicit assumptions.
+          The interesting technical challenge wasn't the plotting. It was data cleaning. Energy data is messy: countries change names, units shift mid-decade, some regions report annually while others report monthly. Building a reliable comparison meant writing a lot of careful Pandas transformations and explicit assumptions.
         </p>
         <p style={{ marginBottom: '20px' }}>
           The bigger lesson: policy debates about energy feel very different when you've actually touched the numbers. Nuclear's capacity factor story is much stronger than the renewables discourse implies, and cost trajectories are more nuanced than either side usually admits.

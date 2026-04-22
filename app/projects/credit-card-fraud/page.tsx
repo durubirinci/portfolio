@@ -29,7 +29,7 @@ export default function FraudDetection() {
           fontSize: '20px',
           letterSpacing: '-0.02em',
         }}>
-          duru<span style={{ color: 'var(--rose)' }}>.</span>
+          duru birinci<span style={{ color: 'var(--rose)' }}>.</span>
         </Link>
         <Link href="/" style={{
           fontFamily: "'JetBrains Mono', monospace",
