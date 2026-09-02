@@ -4,30 +4,30 @@ import { useState } from 'react'
 
 const work = [
   {
-    period: 'May — Aug 2025',
-    role: 'Nuclear Information Technology Intern',
-    company: 'PSEG',
-    location: 'Salem, NJ',
-    tag: 'Internship',
-    tagColor: 'var(--rose)',
+    period: 'May — Aug 2026',
+    role: 'Software Engineer Intern',
+    company: 'Fiserv',
+    initials: 'FI',
+    location: 'Berkeley Heights, NJ',
     bullets: [
-      'Automated enterprise asset tracking with a DBMS-driven reporting system generating weekly analytics on 500+ hardware assets.',
-      'Delivered a 3D scanning solution letting nuclear maintenance supervisors virtually inspect the plant, reducing physical inspection time by 30%.',
-      'Resolved a month-long software deployment roadblock within 72 hours through custom troubleshooting protocols.',
-      "Established the plant's first technical support desk, supporting 200+ employees via ServiceNow.",
+      'Built and shipped to production an internal Python log analysis tool for banking workstations, parsing hundreds of files at once, each thousands of lines, and returning results in seconds while cutting triage time for support engineers by over 50%.',
+      'Designed a SQLite-backed analysis layer that flags failure-inducing errors and generates plain-language causes, recommendations, and next steps.',
+      'Engineered a C# / .NET desktop launcher that orchestrates startup, environment setup, and dashboard delivery, giving non-technical users one-click access to the full tool.',
+      "Integrated an OpenAI-powered chatbot for natural-language querying of parsed log data, built to Fiserv's Responsible AI Guidelines.",
+      'Engineered a two-stage PII pipeline using regex detection and HMAC-SHA256 tokenization, ensuring account data is tokenized before it reaches storage or the language model.',
     ],
   },
   {
-    period: 'Sep 2024 — Now',
-    role: 'IST Service Desk Attendant',
-    company: 'New Jersey Institute of Technology',
-    location: 'Newark, NJ',
-    tag: 'Current',
-    tagColor: 'var(--sage)',
+    period: 'May — Aug 2025',
+    role: 'Nuclear Information Technology Intern',
+    company: 'PSEG',
+    initials: 'PS',
+    location: 'Salem, NJ',
     bullets: [
-      'Lead liaison between IST leadership and 8 student employees, managing knowledge base documentation projects.',
-      'Resolve 60+ technical tickets monthly with a high first-time resolution rate.',
-      "Provide enterprise support across Microsoft Azure, Office 365, and hybrid file systems for NJIT's computing infrastructure.",
+      'Built a SQL-backed reporting system tracking 500+ hardware assets by age, last user, and last known location, giving leadership weekly visibility for replacement planning.',
+      'Digitized hundreds of hard-copy operating procedures into a Microsoft SharePoint library and deployed kiosks across multiple plant sites, modernizing their current process.',
+      'Delivered a 3D scanning solution letting supervisors virtually inspect the plant, cutting physical inspection time by 30% while maintaining safety compliance.',
+      "Established the plant's first ServiceNow-powered support desk, delivering real-time IT support for 200+ employees across departments.",
     ],
   },
 ]
@@ -37,9 +37,8 @@ const education = [
     period: '2023 — 2027 (expected)',
     role: 'B.S. Computer Science',
     company: 'New Jersey Institute of Technology',
+    initials: 'NJ',
     location: 'Newark, NJ',
-    tag: 'Current',
-    tagColor: 'var(--sage)',
     bullets: [
       'Relevant coursework: Data Structures and Algorithms, Foundations of Computer Science, Programming Language Concepts, Intensive Programming in Linux.',
       'Principles of Operating Systems, Cybersecurity, Networking.',
@@ -49,9 +48,8 @@ const education = [
     period: '2019 — 2023',
     role: 'Technical Certificate, Information Technology',
     company: 'Cumberland County Technical Education Center',
+    initials: 'CC',
     location: 'Vineland, NJ',
-    tag: 'Completed',
-    tagColor: 'var(--lavender)',
     bullets: [
       'Four-year technical program focused on IT fundamentals, networking, and foundational programming.',
     ],
@@ -63,150 +61,62 @@ export default function Experience() {
   const items = tab === 'work' ? work : education
 
   return (
-    <section style={{
-      padding: '120px 40px',
-      background: 'var(--cream)',
-      borderTop: '1px solid var(--ink)',
-    }}>
-      <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-        <div style={{
-          display: 'flex',
-          alignItems: 'baseline',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '24px',
-          marginBottom: '60px',
-        }}>
-          <h2 style={{
-            fontSize: 'clamp(48px, 8vw, 96px)',
-            fontWeight: 300,
-            letterSpacing: '-0.04em',
-            lineHeight: '1',
-          }}>
-            <span className="italic" style={{ color: 'var(--rose)' }}>where</span> i've been
-          </h2>
-
-          {/* Tab toggle */}
-          <div style={{
-            display: 'inline-flex',
-            padding: '4px',
-            background: 'var(--paper)',
-            border: '1px solid rgba(26, 24, 22, 0.15)',
-            borderRadius: '100px',
-            fontFamily: "'JetBrains Mono', monospace",
-            fontSize: '13px',
-            textTransform: 'uppercase',
-            letterSpacing: '0.1em',
-          }}>
+    <section className="border-t border-gray-200 dark:border-gray-800">
+      <div className="mx-auto max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
+        <div className="mb-10">
+          <div className="inline-flex rounded-lg bg-gray-100 p-1 text-sm font-medium dark:bg-gray-800">
             <button
               onClick={() => setTab('work')}
-              style={{
-                padding: '10px 24px',
-                background: tab === 'work' ? 'var(--ink)' : 'transparent',
-                color: tab === 'work' ? 'var(--paper)' : 'var(--ink)',
-                border: 'none',
-                borderRadius: '100px',
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-                fontSize: 'inherit',
-                letterSpacing: 'inherit',
-                textTransform: 'inherit',
-                transition: 'all 0.25s',
-              }}
+              className={`rounded-md px-3 py-1 transition-colors ${
+                tab === 'work'
+                  ? 'bg-white text-gray-950 shadow-sm dark:bg-gray-950 dark:text-white'
+                  : 'text-gray-500 dark:text-gray-400'
+              }`}
             >
-              work
+              Work
             </button>
             <button
               onClick={() => setTab('education')}
-              style={{
-                padding: '10px 24px',
-                background: tab === 'education' ? 'var(--ink)' : 'transparent',
-                color: tab === 'education' ? 'var(--paper)' : 'var(--ink)',
-                border: 'none',
-                borderRadius: '100px',
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-                fontSize: 'inherit',
-                letterSpacing: 'inherit',
-                textTransform: 'inherit',
-                transition: 'all 0.25s',
-              }}
+              className={`rounded-md px-3 py-1 transition-colors ${
+                tab === 'education'
+                  ? 'bg-white text-gray-950 shadow-sm dark:bg-gray-950 dark:text-white'
+                  : 'text-gray-500 dark:text-gray-400'
+              }`}
             >
-              education
+              Education
             </button>
           </div>
         </div>
 
-        {items.map((item, i) => (
-          <div key={`${tab}-${i}`} style={{
-            display: 'grid',
-            gridTemplateColumns: '200px 1fr',
-            gap: '60px',
-            paddingBottom: '60px',
-            marginBottom: '60px',
-            borderBottom: i < items.length - 1 ? '1px solid rgba(26, 24, 22, 0.15)' : 'none',
-            animation: 'fade-up 0.4s ease-out',
-          }}>
-            <div>
-              <div style={{
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: '12px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.15em',
-                color: 'var(--ink-soft)',
-                marginBottom: '8px',
-              }}>
-                {item.period}
-              </div>
-              <div style={{
-                padding: '4px 10px',
-                background: item.tagColor,
-                color: 'var(--paper)',
-                display: 'inline-block',
-                fontFamily: "'JetBrains Mono', monospace",
-                fontSize: '10px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                borderRadius: '2px',
-              }}>
-                {item.tag}
-              </div>
-            </div>
-            <div>
-              <h3 style={{
-                fontSize: '32px',
-                fontWeight: 400,
-                letterSpacing: '-0.02em',
-                marginBottom: '4px',
-                lineHeight: '1.15',
-              }}>
-                {item.role}
-              </h3>
-              <div style={{
-                fontSize: '18px',
-                marginBottom: '24px',
-              }}>
-                <span className="italic" style={{ color: 'var(--rose)' }}>{item.company}</span>
-                <span style={{ color: 'var(--ink-soft)', marginLeft: '12px', fontSize: '15px' }}>
+        <ul className="ml-5 border-l border-gray-200 pl-8 dark:border-gray-800">
+          {items.map((item, i) => (
+            <li key={`${tab}-${i}`} className="relative py-4 first:pt-0 last:pb-0">
+              <span className="absolute -left-[52px] top-0 flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-xs font-semibold text-gray-600 dark:border-gray-800 dark:bg-gray-950 dark:text-gray-300">
+                {item.initials}
+              </span>
+
+              <h3 className="font-semibold leading-none">
+                {item.company}
+                <span className="ml-2 text-sm font-normal text-gray-400 dark:text-gray-500">
                   · {item.location}
                 </span>
+              </h3>
+
+              <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <p className="text-sm font-medium text-gray-500 dark:text-gray-400">{item.role}</p>
+                <time className="whitespace-nowrap text-xs tabular-nums text-gray-400 dark:text-gray-500">
+                  {item.period}
+                </time>
               </div>
-              <ul style={{
-                listStyle: 'none',
-                fontSize: '16px',
-                lineHeight: '1.6',
-                color: 'var(--ink-soft)',
-              }}>
+
+              <ul className="ml-4 mt-2 list-outside list-disc space-y-1.5 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                 {item.bullets.map((b, j) => (
-                  <li key={j} style={{ paddingLeft: '24px', position: 'relative', marginBottom: '10px' }}>
-                    <span style={{ position: 'absolute', left: 0, color: 'var(--rose)' }}>✿</span>
-                    {b}
-                  </li>
+                  <li key={j}>{b}</li>
                 ))}
               </ul>
-            </div>
-          </div>
-        ))}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

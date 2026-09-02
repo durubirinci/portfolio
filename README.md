@@ -1,13 +1,13 @@
 # duru.dev — Portfolio
 
-A personal portfolio site built with Next.js, designed in a "Swiss grid brutalist with feminine touches" aesthetic — bold serif typography, warm cream/blush/ink palette, asymmetric layouts, and thoughtful details.
+A personal portfolio site built with Next.js, designed in a minimal neutral aesthetic — Inter body text, Calistoga display headings, gray-scale palette with light/dark mode.
 
-## 🌸 Stack
+## Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Language**: TypeScript
-- **Styling**: Pure CSS + inline styles (no Tailwind, no framework — full control)
-- **Fonts**: Fraunces (display), Instrument Serif (italic accent), JetBrains Mono (mono)
+- **Styling**: Tailwind CSS v4
+- **Fonts**: Inter (body), Calistoga (display headings)
 - **Deploy**: Vercel
 
 ## 🚀 Running locally
@@ -30,24 +30,30 @@ Open [http://localhost:3000](http://localhost:3000) to see it.
 
 You'll get a URL like `duru-portfolio.vercel.app` in ~30 seconds.
 
-## 🎨 Customizing
+## Customizing
 
-- **Colors**: Edit CSS variables in `app/globals.css`
+- **Colors**: Tailwind gray scale utility classes, used directly throughout components
 - **Content**: Edit `app/page.tsx` for the home page
 - **Project case studies**: `app/projects/[project-name]/page.tsx`
-- **Add a project**: Copy one of the project folders, rename, update content, then add a card on `app/page.tsx`
+- **Add a project**: Copy one of the project folders, rename, update content, then add a card in `components/Projects.tsx`
 
-## 📁 Structure
+## Structure
 
 ```
 /
 ├── app/
-│   ├── layout.tsx          # Root layout + fonts
+│   ├── layout.tsx          # Root layout + fonts + theme init
 │   ├── page.tsx            # Home page
-│   ├── globals.css         # Design system / fonts / variables
+│   ├── globals.css         # Tailwind import + base styles
 │   └── projects/
 │       ├── nuclear-renewable/page.tsx
 │       └── credit-card-fraud/page.tsx
+├── components/
+│   ├── Nav.tsx
+│   ├── ThemeToggle.tsx
+│   ├── IconLinks.tsx
+│   ├── Experience.tsx
+│   └── Projects.tsx
 ├── next.config.js
 └── package.json
 ```

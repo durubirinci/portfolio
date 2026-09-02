@@ -1,94 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=JetBrains+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap');
+@import 'tailwindcss';
 
-:root {
-  --cream: #f5eee4;
-  --cream-dark: #ebe0cf;
-  --ink: #1a1816;
-  --ink-soft: #3a342e;
-  --blush: #f2c5b8;
-  --blush-deep: #e89d8a;
-  --rose: #d4837a;
-  --sage: #8a9a7a;
-  --gold: #c9a668;
-  --lavender: #c8b5d9;
-  --paper: #faf6ef;
-  --grain-opacity: 0.035;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-feature-settings: 'ss01', 'ss02', 'ss03';
-  position: relative;
-  overflow-x: hidden;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1000;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: var(--grain-opacity);
-  mix-blend-mode: multiply;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.mono {
-  font-family: 'JetBrains Mono', monospace;
-  font-feature-settings: 'ss02';
-}
-
-.italic {
-  font-family: 'Instrument Serif', serif;
-  font-style: italic;
+.font-display {
+  font-family: var(--font-calistoga), Georgia, serif;
 }
 
 ::selection {
-  background: var(--blush);
-  color: var(--ink);
+  background: rgb(3 7 18 / 0.08);
 }
 
-/* Marquee animation */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(-3deg); }
-  50% { transform: translateY(-8px) rotate(-3deg); }
-}
-
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-up {
-  animation: fade-up 0.8s ease-out backwards;
+.dark ::selection {
+  background: rgb(255 255 255 / 0.15);
 }
