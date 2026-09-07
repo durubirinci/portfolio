@@ -11,8 +11,8 @@ const photos = [
 
 // resting transform for each position in the stack, back to front
 const positions = [
-  { rotate: -6, x: 12, y: 16 },
-  { rotate: 6, x: -12, y: 8 },
+  { rotate: -6, x: 8, y: 10 },
+  { rotate: 6, x: -8, y: 5 },
   { rotate: -2, x: 0, y: 0 },
 ]
 
@@ -27,7 +27,7 @@ export default function PhotoStack() {
   }
 
   return (
-    <div className="relative h-64 w-56 sm:h-72 sm:w-64">
+    <div className="relative h-48 w-40 sm:h-56 sm:w-48">
       {order.map((photoIndex, stackPos) => (
         <Card
           key={photoIndex}
@@ -99,7 +99,7 @@ function Card({
           })
         }
       }}
-      className={`absolute inset-0 h-full w-full touch-none select-none rounded-lg border-[6px] border-white object-cover shadow-lg ${
+      className={`absolute inset-0 h-full w-full touch-none select-none rounded-lg border-4 border-white object-cover shadow-lg ${
         isFront ? 'cursor-grab active:cursor-grabbing' : ''
       }`}
     />

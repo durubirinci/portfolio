@@ -19,26 +19,26 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="work" className="border-t border-gray-200 dark:border-gray-800">
-      <div className="mx-auto max-w-3xl px-6 py-16 sm:px-10 sm:py-24">
-        <div className="mb-10 flex flex-wrap items-baseline justify-between gap-4">
-          <h2 className="font-display text-3xl sm:text-4xl">featured projects</h2>
+    <section id="work" className="scroll-mt-20 border-t border-gray-200 dark:border-gray-800">
+      <div className="mx-auto max-w-3xl px-6 py-10 sm:px-10 sm:py-14">
+        <div className="mb-6 flex flex-wrap items-baseline justify-between gap-4">
+          <h2 className="font-display text-2xl sm:text-3xl">featured projects</h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3">
           {projects.map((p) => (
             <article
               key={p.slug}
-              className="rounded-lg border border-gray-200 p-5 transition-colors hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-700"
+              className="rounded-lg border border-gray-200 p-4 transition-colors hover:border-gray-300 dark:border-gray-800 dark:hover:border-gray-700"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <h3 className="font-semibold">{p.title}</h3>
+                <h3 className="text-sm font-semibold">{p.title}</h3>
                 <span className="text-xs text-gray-400 dark:text-gray-500">{p.period}</span>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+              <p className="mt-1.5 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                 {p.description}
               </p>
-              <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex flex-wrap gap-1.5">
                   {p.tags.map((t) => (
                     <span
