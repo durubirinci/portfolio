@@ -12,7 +12,7 @@ const links = [
   {
     label: 'resume',
     detail: 'view / download pdf',
-    href: '/resume.pdf',
+    href: '/duru-birinci-resume.pdf',
     external: true,
   },
   {
