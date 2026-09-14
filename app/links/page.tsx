@@ -17,7 +17,7 @@ const links = [
   },
   {
     label: 'website',
-    detail: 'duru.dev',
+    detail: 'durubirinci.vercel.app',
     href: '/',
     external: false,
   },
