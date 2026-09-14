@@ -1,11 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import IconLinks from '@/components/IconLinks'
 import ThemeToggle from '@/components/ThemeToggle'
 
 export const metadata: Metadata = {
   title: 'Duru Birinci — Links',
-  description: 'Resume, website, and LinkedIn for Duru Birinci.',
+  description: 'Resume, website, LinkedIn, and email for Duru Birinci.',
 }
 
 const links = [
@@ -41,6 +40,18 @@ const links = [
     icon: (
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'email',
+    detail: 'db662@njit.edu',
+    href: 'mailto:db662@njit.edu',
+    external: false,
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m2 7 10 6 10-6" />
       </svg>
     ),
   },
@@ -92,10 +103,6 @@ export default function LinksPage() {
               </span>
             </a>
           ))}
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <IconLinks />
         </div>
       </div>
     </main>
