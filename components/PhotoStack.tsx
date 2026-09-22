@@ -6,7 +6,7 @@ import { motion, useAnimation, useMotionValue } from 'framer-motion'
 const photos = [
   { src: '/images/duru-pseg.jpg', alt: 'Duru volunteering with PSEG' },
   { src: '/images/duru-fiserv.jpg', alt: 'Duru at her Fiserv internship' },
-  { src: '/images/duru-selfie.jpg', alt: 'Duru Birinci' },
+  { src: '/images/duru-headshot.webp', alt: 'Duru Birinci' },
 ]
 
 // resting transform for each position in the stack, back to front

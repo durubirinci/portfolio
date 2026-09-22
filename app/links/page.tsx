@@ -68,7 +68,7 @@ export default function LinksPage() {
         <div className="flex flex-col items-center text-center">
           <div className="h-20 w-20 overflow-hidden rounded-full border border-gray-200 dark:border-gray-800">
             <Image
-              src="/images/duru-selfie.jpg"
+              src="/images/duru-headshot.webp"
               alt="Duru Birinci"
               width={80}
               height={80}

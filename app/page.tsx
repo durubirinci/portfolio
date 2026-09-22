@@ -73,13 +73,16 @@ export default function Home() {
 
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
           <p>
-            i&apos;m a senior studying cs at njit. most of what i build ends up touching real infrastructure: energy data, financial systems, stuff that actually has to work.
+            i&apos;m a cs student at njit (class of 2027), pursuing my bachelor&apos;s with a specialization in artificial intelligence and machine learning.
           </p>
           <p>
-            i spent last summer interning at a nuclear plant, and it changed how i think about engineering. the good stuff is invisible, and that&apos;s the bar i hold my own work to now.
+            with academic and industry experience in python, java, c/c++, javascript, sql, and react, i build full-stack applications and data tools that solve real-world problems.
           </p>
           <p>
-            lately i&apos;ve been getting into fraud detection and risk modeling, the fintech side of ml.
+            last summer, i interned at pseg as a nuclear it intern, where i helped launch new jersey&apos;s first nuclear power plant technical support desk. this past summer, i joined fiserv as a software engineering intern.
+          </p>
+          <p>
+            i&apos;m actively exploring new grad roles in software engineering, data, and ai where i can contribute, grow, and bring both technical and analytical skills to the table. i&apos;d love to connect.
           </p>
         </div>
 
