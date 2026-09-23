@@ -88,7 +88,7 @@ export default function Experience() {
   const items = tab === 'work' ? work : education
 
   return (
-    <section className="border-t border-gray-200 dark:border-gray-800">
+    <section id="experience" className="scroll-mt-20 border-t border-gray-200 dark:border-gray-800">
       <div className="mx-auto max-w-3xl px-6 py-10 sm:px-10 sm:py-14">
         <div className="mb-6">
           <div className="inline-flex rounded-lg bg-gray-100 p-1 text-sm font-medium dark:bg-gray-800">

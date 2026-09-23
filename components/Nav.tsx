@@ -16,7 +16,7 @@ export default function Nav({ back }: { back?: boolean }) {
       ) : (
         <div className="hidden items-center gap-5 text-base text-gray-500 sm:flex">
           <a href="#" className="transition-colors hover:text-gray-950 dark:hover:text-white">home</a>
-          <a href="#work" className="transition-colors hover:text-gray-950 dark:hover:text-white">work</a>
+          <a href="#experience" className="transition-colors hover:text-gray-950 dark:hover:text-white">work</a>
           <a href="#about" className="transition-colors hover:text-gray-950 dark:hover:text-white">about</a>
           <a href="#contact" className="transition-colors hover:text-gray-950 dark:hover:text-white">contact</a>
         </div>
