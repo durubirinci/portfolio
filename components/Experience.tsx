@@ -29,6 +29,20 @@ const work: TimelineItem[] = [
     ],
   },
   {
+    period: 'Sep 2025 — Present',
+    role: 'Information Services and Technology Desk Supervisor',
+    company: 'NJIT',
+    initials: 'NJ',
+    logo: '/images/logo-njit.svg',
+    location: 'Newark, NJ',
+    bullets: [
+      'Lead a team of 8 student workers, training new hires, managing shift coverage, and handling escalated issues.',
+      'Resolve 70+ tickets weekly in ServiceNow across account access, software, hardware, and network issues for students, faculty, and staff.',
+      'Protect university accounts by verifying identities and managing access and MFA using SailPoint and Duo.',
+      'Publish and update knowledge base articles for recurring issues, helping the desk resolve common tickets faster.',
+    ],
+  },
+  {
     period: 'May — Aug 2025',
     role: 'Nuclear Information Technology Intern',
     company: 'PSEG',
