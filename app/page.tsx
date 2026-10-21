@@ -5,7 +5,10 @@ import IconLinks from '@/components/IconLinks'
 import PhotoStack from '@/components/PhotoStack'
 
 const skills = [
-  'Python', 'Java', 'C#', 'React', 'SQL', 'Scikit-learn', 'Pandas', 'C++', 'JavaScript', '.NET', 'Streamlit', 'Azure',
+  'Python', 'Java', 'TypeScript', 'JavaScript', 'SQL', 'C#',
+  '.NET', 'React.js', 'React Native', 'Next.js', 'Tailwind CSS', 'HTML', 'CSS',
+  'Node.js', 'FastAPI', 'REST APIs',
+  'SQLite', 'PostgreSQL', 'Redis',
 ]
 
 export default function Home() {
