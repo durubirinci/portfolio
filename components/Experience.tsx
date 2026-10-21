@@ -30,7 +30,7 @@ const work: TimelineItem[] = [
   },
   {
     period: 'Sep 2025 — Present',
-    role: 'Information Services and Technology Desk Supervisor',
+    role: 'Information Services and Technology Desk Attendant',
     company: 'NJIT',
     initials: 'NJ',
     logo: '/images/logo-njit.svg',
