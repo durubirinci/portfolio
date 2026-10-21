@@ -141,7 +141,17 @@ export default function Home() {
 
         <div className="border-t border-gray-200 px-6 py-4 dark:border-gray-800 sm:px-10">
           <div className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-2 text-xs text-gray-400 dark:text-gray-500">
-            <span>© 2026 duru birinci</span>
+            <span>
+              © 2026 duru birinci · design based on{' '}
+              <a
+                href="https://github.com/tedawf/tedawf.com"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-2 transition-colors hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                tedawf.com
+              </a>
+            </span>
             <span>last updated: september 6, 2026</span>
           </div>
         </div>

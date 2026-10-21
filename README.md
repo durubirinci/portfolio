@@ -58,4 +58,8 @@ You'll get a URL like `duru-portfolio.vercel.app` in ~30 seconds.
 └── package.json
 ```
 
+## Credits
+
+Design based on [tedawf.com](https://github.com/tedawf/tedawf.com) by Ted (Ang Wei Feng), used under the MIT license. See `LICENSE.txt`.
+
 Made with ✿ in Newark.
